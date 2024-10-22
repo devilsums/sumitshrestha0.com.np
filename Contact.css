@@ -1,0 +1,45 @@
+main {
+    display: flex;                /* Enable Flexbox */
+    flex-direction: column;      /* Stack children vertically */
+    justify-content: center;     /* Center vertically */
+    align-items: center;         /* Center horizontally */
+    text-align: center;          /* Center text */
+    height: 100vh;               /* Full height of the viewport */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.call-button {
+    padding: 15px 30px;
+    font-size: 1.6rem;
+    color: #db1f1f;
+    background-color: black;
+    border: 2px solid #db1f1f;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.call-button:hover {
+    background-color: #db1f1f;
+    color: black;
+    box-shadow: 0 0 15px #db1f1f;
+}
+
+.social-icons {
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #db1f1f;
+}

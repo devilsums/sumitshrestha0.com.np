@@ -1,0 +1,55 @@
+.education {
+    margin-top: 120px;
+    padding: 5rem 9%;
+    background-color: black;
+    color: white;
+}
+
+.education h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: #db1f1f;
+    text-align: center;
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.degree {
+    background-color: #111010;
+    padding: 3rem; /* Reduced padding for smaller boxes */
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth effect */
+}
+
+.degree.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.degree h3 {
+    font-size: 2.2rem; /* Slightly smaller heading size */
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.degree h3 span {
+    color: #db1f1f;
+    font-weight: 600;
+}
+
+.degree p {
+    font-size: 1.4rem; /* Slightly smaller text size */
+    margin-bottom: 1rem;
+    color: #999;
+}
+
+.degree p i {
+    color: #db1f1f;
+}

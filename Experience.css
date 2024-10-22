@@ -1,0 +1,72 @@
+.experience {
+    margin-top: 120px;
+    padding: 5rem 9%;
+    background-color: black;
+    color: white;
+}
+
+.experience h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: #db1f1f;
+    text-align: center;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.job {
+    background-color: #111010;
+    padding: 3rem; /* Reduced padding for smaller boxes */
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth effect */
+}
+
+.job.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.job h3 {
+    font-size: 2.2rem; /* Slightly smaller heading size */
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.job h3 span {
+    color: #db1f1f;
+    font-weight: 600;
+}
+
+.job p {
+    font-size: 1.4rem; /* Slightly smaller text size */
+    margin-bottom: 1rem;
+    color: #999;
+}
+
+.job ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.job ul li {
+    font-size: 1.4rem; /* Slightly smaller list item size */
+    margin-bottom: 1rem;
+    color: white;
+    position: relative;
+}
+
+.job ul li::before {
+    content: "\f00c"; /* Font Awesome check mark */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #db1f1f;
+    position: absolute;
+    left: -2rem;
+}

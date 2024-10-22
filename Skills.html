@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Skills.css">
+    <title>Sumit's Skills!</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Sumit</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Service.html">Service</a>
+            <a href="#" class="active">Skills</a>
+            <a href="Education.html">Education</a>
+            <a href="Experience.html">Experience</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-content">
+            <div class="skill" data-progress="90">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">Adobe Illustrator</div>
+                    <div class="percentage">90%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="85">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">Adobe Photoshop</div>
+                    <div class="percentage">85%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="80">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">Adobe InDesign</div>
+                    <div class="percentage">80%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="70">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">CorelDRAW</div>
+                    <div class="percentage">70%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="85">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">HTML & CSS</div>
+                    <div class="percentage">85%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="70">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">JavaScript</div>
+                    <div class="percentage">70%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="60">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">PHP</div>
+                    <div class="percentage">60%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="65">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">MySQL</div>
+                    <div class="percentage">65%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="75">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">C++</div>
+                    <div class="percentage">75%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="50">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">Python</div>
+                    <div class="percentage">50%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="55">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">Java</div>
+                    <div class="percentage">55%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="65">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">JavaScript</div>
+                    <div class="percentage">65%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-progress="40">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle" style="--progress: 0;"></div>
+                    <div class="skill-label">C#</div>
+                    <div class="percentage">40%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function animateSkillCircles() {
+        const skills = document.querySelectorAll('.skill');
+
+        skills.forEach(skill => {
+            const progress = parseInt(skill.dataset.progress, 10);
+            const outerCircle = skill.querySelector('.outer-circle');
+            
+            let currentProgress = 0; // Start from 0
+            const increment = Math.ceil(progress / 100); // Increment value
+
+            const interval = setInterval(() => {
+                if (currentProgress < progress) {
+                    currentProgress += increment; // Increment the progress
+                    outerCircle.style.setProperty('--progress', Math.min(currentProgress, progress)); // Ensure it does not exceed target
+                } else {
+                    clearInterval(interval); // Stop when target is reached
+                }
+            }, 20); // Adjust the interval speed if needed
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        animateSkillCircles();
+    });
+    </script>
+    <script>
+        const header = document.querySelector('header');
+    
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Adjust the scroll position to trigger the effect
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

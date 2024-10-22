@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Service.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Sumit</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Service.html" class="active">Service</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Education.html">Education</a>
+            <a href="Experience.html">Experience</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Section for services -->
+    <section>
+        <h1>My Services</h1>
+
+        <div class="services-container">
+            <div class="service-box">
+                <h2>Graphic Design</h2>
+                <p>Logo design, brochures, social media graphics, and full branding services to elevate your business image.</p>
+            </div>
+
+            <div class="service-box">
+                <h2>Web Design & Development</h2>
+                <p>Responsive and modern website designs, with development expertise in HTML, CSS, JavaScript, and WordPress.</p>
+            </div>
+
+            <div class="service-box">
+                <h2>Software Development</h2>
+                <p>Custom applications, POS systems, e-commerce platforms, and continuous software maintenance services.</p>
+            </div>
+
+            <div class="service-box">
+                <h2>UI/UX Design</h2>
+                <p>Wireframes, prototypes, and intuitive user interfaces to create a seamless user experience for your projects.</p>
+            </div>
+
+            <div class="service-box">
+                <h2>Multimedia & Interactive Content</h2>
+                <p>Interactive designs for education, video editing, animations, and presentations for impactful storytelling.</p>
+            </div>
+
+            <div class="service-box">
+                <h2>Social Media Management</h2>
+                <p>Content creation, engagement strategies, and social media campaigns to grow your online presence.</p>
+            </div>
+
+            <div class="service-box">
+                <h2>Printing & Publication</h2>
+                <p>Offset printing, publication layout design, and packaging designs for professional-grade printed materials.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to reveal service boxes with animation on scroll/load
+        const serviceBoxes = document.querySelectorAll('.service-box');
+
+        const revealBoxes = () => {
+            serviceBoxes.forEach((box, index) => {
+                setTimeout(() => {
+                    box.classList.add('visible');
+                }, index * 200); // Stagger animation with delay
+            });
+        };
+
+        // Wait until content is loaded before triggering the animation
+        window.addEventListener('load', revealBoxes);
+    </script>
+    
+    <script>
+        const header = document.querySelector('header');
+    
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Adjust the scroll position to trigger the effect
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
