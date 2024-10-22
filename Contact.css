@@ -43,3 +43,21 @@ h1 {
 .social-icons a:hover {
     color: #db1f1f;
 }
+
+.email-button {
+    margin-top: 15px;
+    padding: 15px 30px;
+    font-size: 1.6rem;
+    color: #db1f1f;
+    background-color: black;
+    border: 2px solid #db1f1f;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.email-button:hover {
+    background-color: #db1f1f;
+    color: black;
+    box-shadow: 0 0 15px #db1f1f;
+}
