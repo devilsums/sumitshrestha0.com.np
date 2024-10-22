@@ -11,6 +11,12 @@
 <body>
     <header>
         <a href="index.html" class="logo">Sumit</a>
+
+        <!-- Burger menu icon -->
+        <button class="burger-menu" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="Service.html">Service</a>
@@ -178,6 +184,17 @@
             } else {
                 header.classList.remove('scrolled');
             }
+        });
+    </script>
+    <script>
+        const burgerMenu = document.querySelector('.burger-menu');
+        const nav = document.querySelector('nav');
+        const body = document.body;
+    
+        // Toggle the active class on burger menu click
+        burgerMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            body.classList.toggle('menu-active'); // Prevent body scroll when menu is open
         });
     </script>
 </body>

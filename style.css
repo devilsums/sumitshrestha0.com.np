@@ -297,3 +297,59 @@ span{
     border-bottom: 0.5rem solid #db1f1f;
     color: #db1f1f;
 }
+
+/* Burger Menu */
+.burger-menu {
+    display: none; /* Initially hidden */
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Show burger menu on smaller screens */
+@media (max-width: 995px) {
+    .burger-menu {
+        display: block; /* Display burger icon in mobile view */
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        z-index: 101; /* Ensure the button is above the nav */
+    }
+
+    /* Hide nav by default */
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: #161616;
+        flex-direction: column;
+        padding: 2rem;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: flex; /* Show the nav when active */
+    }
+
+    nav a {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    /* Adjust hover effects for links */
+    nav a:hover,
+    nav a:active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #db1f1f;
+    }
+}
+
+/* Prevent body scroll when mobile menu is active */
+body.menu-active {
+    overflow: hidden;
+}
