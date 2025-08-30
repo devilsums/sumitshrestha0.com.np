@@ -1,0 +1,22 @@
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #db1f1f;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+    z-index: 20;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #db1f1f;
+    color: #000;
+}
+
+.prev-btn { left: 1rem; }
+.next-btn { right: 1rem; }
